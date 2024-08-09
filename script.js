@@ -1,5 +1,20 @@
 function minDate(dates) {
   //write you code here
+	const millisec=[];
+	let i=0;
+	for(let date of dates){
+		let msec=Date.parse(date);
+		millisec.push(msec);
+	}
+	for(sec of millisec){
+		if(i<sec){
+			i=sec;
+		}
+	}
+	const d = new Date(i);
+	
+
+	
 }
 
 // Do not change the code
@@ -37,4 +52,4 @@ var dates = [
   "2023/03/30",
 ];
 
-alert(minDate(dates));
+ alert(minDate(dates));
